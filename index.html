@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="NIMBUS — AI-аналитика для SaaS-команд. Превратите данные в решения за секунды." />
+  <title>NIMBUS — AI-аналитика для SaaS-команд</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ===== NAV ===== -->
+  <header class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="#top" class="nav__logo" aria-label="NIMBUS">
+        <svg class="nav__logo-mark" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+          <defs>
+            <linearGradient id="logoGrad" x1="0" y1="0" x2="32" y2="32" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stop-color="#7C5CFF" />
+              <stop offset="100%" stop-color="#00D4FF" />
+            </linearGradient>
+          </defs>
+          <path d="M6 22 C 6 14, 10 8, 16 8 C 22 8, 26 13, 26 18 C 26 22, 22 24, 18 24 L 8 24 C 7 24, 6 23, 6 22 Z" fill="url(#logoGrad)" />
+          <circle cx="20" cy="14" r="2.5" fill="#0A0B14" />
+        </svg>
+        <span class="nav__logo-text">NIMBUS</span>
+      </a>
+
+      <nav class="nav__links">
+        <a href="#features">Возможности</a>
+        <a href="#dashboard">Дашборд</a>
+        <a href="#pricing">Тарифы</a>
+        <a href="#docs">Документация</a>
+      </nav>
+
+      <div class="nav__cta">
+        <a href="#login" class="btn btn--ghost btn--sm">Войти</a>
+        <a href="#try" class="btn btn--primary btn--sm">Попробовать</a>
+      </div>
+
+      <button class="nav__burger" id="burger" aria-label="Меню">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="top">
+    <div class="hero__bg" aria-hidden="true">
+      <div class="hero__grid"></div>
+      <div class="hero__glow hero__glow--1"></div>
+      <div class="hero__glow hero__glow--2"></div>
+    </div>
+
+    <div class="container hero__inner">
+      <a href="#changelog" class="hero__badge">
+        <span class="hero__badge-dot"></span>
+        <span>v2.4 · realtime-стриминг и SQL-агент</span>
+        <span class="hero__badge-arrow">→</span>
+      </a>
+
+      <h1 class="hero__title">
+        Превратите данные<br />
+        в <span class="hero__title-grad">решения</span> за&nbsp;секунды
+      </h1>
+
+      <p class="hero__lead">
+        NIMBUS — AI-аналитика для продуктовых команд. Подключите БД, задайте вопрос&nbsp;на&nbsp;русском —
+        получите дашборд, инсайт и&nbsp;готовый запрос.
+      </p>
+
+      <div class="hero__actions">
+        <a href="#try" class="btn btn--primary btn--lg">
+          <span>Запустить демо</span>
+          <svg viewBox="0 0 16 16" width="14" height="14" fill="none" aria-hidden="true">
+            <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </a>
+        <a href="#dashboard" class="btn btn--ghost btn--lg">
+          <svg viewBox="0 0 16 16" width="14" height="14" fill="none" aria-hidden="true">
+            <circle cx="8" cy="8" r="7" stroke="currentColor" stroke-width="1.5" />
+            <path d="M6 5l5 3-5 3V5z" fill="currentColor" />
+          </svg>
+          <span>Посмотреть видео</span>
+        </a>
+      </div>
+
+      <div class="hero__meta">
+        <span><strong>14 дней</strong> бесплатно</span>
+        <span class="hero__meta-dot"></span>
+        <span>без карты</span>
+        <span class="hero__meta-dot"></span>
+        <span>отмена в&nbsp;1&nbsp;клик</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== LOGOS ===== -->
+  <section class="logos">
+    <div class="container">
+      <p class="logos__caption">Уже используют команды</p>
+      <div class="logos__grid">
+        <span class="logos__item">◆ Helion</span>
+        <span class="logos__item">⬢ Quarkly</span>
+        <span class="logos__item">◯ Polaris</span>
+        <span class="logos__item">▲ Stratos</span>
+        <span class="logos__item">⊛ Northstar</span>
+        <span class="logos__item">⬡ Mercury</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FEATURES ===== -->
+  <section class="features" id="features">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Возможности</span>
+        <h2 class="section-title">
+          Аналитика на&nbsp;русском.<br />
+          <span class="text-grad">Без SQL и&nbsp;дашборд-комитетов.</span>
+        </h2>
+        <p class="section-lead">
+          Подключите Postgres, ClickHouse или Snowflake — задавайте вопросы как живому&nbsp;человеку.
+          NIMBUS пишет запрос, строит график и объясняет данные.
+        </p>
+      </div>
+
+      <div class="features__grid">
+
+        <article class="feature-card">
+          <div class="feature-card__icon" data-color="purple">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" aria-hidden="true">
+              <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+            </svg>
+          </div>
+          <h3>SQL-агент</h3>
+          <p>Спросите «сколько новых пользователей пришло из США за неделю?» — получите запрос, график и краткий вывод за&nbsp;3&nbsp;секунды.</p>
+          <ul class="feature-card__list">
+            <li>Postgres · ClickHouse · Snowflake</li>
+            <li>Понимает join'ы и&nbsp;агрегации</li>
+            <li>Объясняет, что сделал</li>
+          </ul>
+        </article>
+
+        <article class="feature-card">
+          <div class="feature-card__icon" data-color="cyan">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" aria-hidden="true">
+              <rect x="3" y="3" width="7" height="9" rx="1.5" stroke="currentColor" stroke-width="1.8" />
+              <rect x="14" y="3" width="7" height="5" rx="1.5" stroke="currentColor" stroke-width="1.8" />
+              <rect x="14" y="12" width="7" height="9" rx="1.5" stroke="currentColor" stroke-width="1.8" />
+              <rect x="3" y="16" width="7" height="5" rx="1.5" stroke="currentColor" stroke-width="1.8" />
+            </svg>
+          </div>
+          <h3>Живые дашборды</h3>
+          <p>Соберите дашборд из вопросов в&nbsp;чате. Перетаскивайте блоки, делитесь по&nbsp;ссылке. Обновляются автоматически.</p>
+          <ul class="feature-card__list">
+            <li>Drag-and-drop</li>
+            <li>Realtime-стриминг</li>
+            <li>Расшаривание команде</li>
+          </ul>
+        </article>
+
+        <article class="feature-card">
+          <div class="feature-card__icon" data-color="green">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" aria-hidden="true">
+              <path d="M3 12c2-4 5-6 9-6s7 2 9 6c-2 4-5 6-9 6s-7-2-9-6z" stroke="currentColor" stroke-width="1.8" />
+              <circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="1.8" />
+            </svg>
+          </div>
+          <h3>Аномалии и&nbsp;алерты</h3>
+          <p>NIMBUS следит за метриками 24/7. Просадка retention, пик ошибок, странный трафик — мгновенно в&nbsp;Slack&nbsp;или&nbsp;TG.</p>
+          <ul class="feature-card__list">
+            <li>ML-детектор аномалий</li>
+            <li>Slack · Telegram · Email</li>
+            <li>Контекст в&nbsp;уведомлении</li>
+          </ul>
+        </article>
+
+        <article class="feature-card">
+          <div class="feature-card__icon" data-color="orange">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" aria-hidden="true">
+              <rect x="3" y="3" width="18" height="18" rx="3" stroke="currentColor" stroke-width="1.8" />
+              <path d="M3 9h18M9 3v18" stroke="currentColor" stroke-width="1.8" />
+            </svg>
+          </div>
+          <h3>Безопасность</h3>
+          <p>SSO, двухфакторка, row-level security, аудит. Данные не уходят с&nbsp;вашей инфраструктуры — on-prem-режим из&nbsp;коробки.</p>
+          <ul class="feature-card__list">
+            <li>SSO · SAML · SCIM</li>
+            <li>SOC2 / ISO 27001</li>
+            <li>On-prem · Self-hosted</li>
+          </ul>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== DASHBOARD PREVIEW ===== -->
+  <section class="dashboard" id="dashboard">
+    <div class="container">
+      <div class="section-head section-head--center">
+        <span class="eyebrow">Превью</span>
+        <h2 class="section-title">Один интерфейс. <span class="text-grad">Все&nbsp;ответы.</span></h2>
+        <p class="section-lead">Слева&nbsp;— чат с агентом. Справа&nbsp;— живой дашборд. Между ними&nbsp;— тысячи строк&nbsp;SQL, которые вам не&nbsp;нужно писать.</p>
+      </div>
+
+      <div class="dashboard__frame">
+        <div class="dashboard__chrome">
+          <span class="dashboard__dot dashboard__dot--red"></span>
+          <span class="dashboard__dot dashboard__dot--yellow"></span>
+          <span class="dashboard__dot dashboard__dot--green"></span>
+          <span class="dashboard__url">app.nimbus.ai/workspace/acme/main</span>
+        </div>
+
+        <div class="dashboard__body">
+
+          <!-- Sidebar (chat) -->
+          <aside class="dash-chat">
+            <div class="dash-chat__head">
+              <span class="dash-chat__title">Spaces</span>
+              <span class="dash-chat__pill">live</span>
+            </div>
+
+            <div class="dash-chat__msg dash-chat__msg--user">
+              <span class="dash-chat__avatar">К</span>
+              <div>
+                <p>Покажи MRR по&nbsp;месяцам за&nbsp;2025</p>
+              </div>
+            </div>
+
+            <div class="dash-chat__msg dash-chat__msg--bot">
+              <span class="dash-chat__avatar dash-chat__avatar--bot">N</span>
+              <div>
+                <p>MRR вырос с&nbsp;<strong>$48k</strong> до&nbsp;<strong>$214k</strong> (+346%). Самый сильный месяц&nbsp;— август.</p>
+                <code class="dash-chat__code">SELECT date_trunc('month', d) AS m,<br />SUM(arr)/12 AS mrr FROM subs<br />WHERE d >= '2025-01' GROUP BY 1;</code>
+              </div>
+            </div>
+
+            <div class="dash-chat__input">
+              <span class="dash-chat__input-prompt">›</span>
+              <span class="dash-chat__input-text">Сравни с&nbsp;прогнозом по&nbsp;квартал…</span>
+              <span class="dash-chat__caret"></span>
+            </div>
+          </aside>
+
+          <!-- Main area -->
+          <div class="dash-main">
+
+            <div class="dash-main__head">
+              <h4>ACME · Q4 Overview</h4>
+              <div class="dash-main__filters">
+                <span class="dash-pill dash-pill--active">30 дней</span>
+                <span class="dash-pill">90 дней</span>
+                <span class="dash-pill">YTD</span>
+                <span class="dash-pill">Custom</span>
+              </div>
+            </div>
+
+            <div class="dash-stats">
+              <div class="dash-stat">
+                <span class="dash-stat__label">MRR</span>
+                <span class="dash-stat__value">$214,820</span>
+                <span class="dash-stat__delta dash-stat__delta--up">▲ 24.3%</span>
+              </div>
+              <div class="dash-stat">
+                <span class="dash-stat__label">Active users</span>
+                <span class="dash-stat__value">8,432</span>
+                <span class="dash-stat__delta dash-stat__delta--up">▲ 12.1%</span>
+              </div>
+              <div class="dash-stat">
+                <span class="dash-stat__label">Churn</span>
+                <span class="dash-stat__value">2.4%</span>
+                <span class="dash-stat__delta dash-stat__delta--down">▼ 0.8%</span>
+              </div>
+              <div class="dash-stat">
+                <span class="dash-stat__label">NPS</span>
+                <span class="dash-stat__value">62</span>
+                <span class="dash-stat__delta dash-stat__delta--up">▲ 4</span>
+              </div>
+            </div>
+
+            <div class="dash-chart">
+              <div class="dash-chart__head">
+                <span>MRR по&nbsp;месяцам</span>
+                <span class="dash-chart__legend">
+                  <span class="dash-chart__dot dash-chart__dot--p"></span> 2025
+                  <span class="dash-chart__dot dash-chart__dot--c"></span> 2024
+                </span>
+              </div>
+              <svg viewBox="0 0 600 200" class="dash-chart__svg" aria-hidden="true">
+                <defs>
+                  <linearGradient id="areaGrad" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#7C5CFF" stop-opacity="0.4" />
+                    <stop offset="100%" stop-color="#7C5CFF" stop-opacity="0" />
+                  </linearGradient>
+                </defs>
+                <!-- grid -->
+                <g stroke="rgba(232,234,246,0.06)" stroke-width="1">
+                  <line x1="0" y1="40" x2="600" y2="40" />
+                  <line x1="0" y1="90" x2="600" y2="90" />
+                  <line x1="0" y1="140" x2="600" y2="140" />
+                  <line x1="0" y1="190" x2="600" y2="190" />
+                </g>
+                <!-- 2024 line (lighter, dashed) -->
+                <path d="M20 150 L 70 145 L 120 138 L 170 130 L 220 128 L 270 120 L 320 115 L 370 110 L 420 108 L 470 102 L 520 100 L 580 95"
+                  stroke="#00D4FF" stroke-width="2" fill="none" stroke-dasharray="4 4" opacity="0.6" />
+                <!-- 2025 line (purple, solid) + area -->
+                <path d="M20 160 L 70 145 L 120 130 L 170 110 L 220 90 L 270 75 L 320 65 L 370 55 L 420 48 L 470 42 L 520 35 L 580 28 L 580 200 L 20 200 Z"
+                  fill="url(#areaGrad)" />
+                <path d="M20 160 L 70 145 L 120 130 L 170 110 L 220 90 L 270 75 L 320 65 L 370 55 L 420 48 L 470 42 L 520 35 L 580 28"
+                  stroke="#7C5CFF" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+                <!-- dots -->
+                <g fill="#7C5CFF">
+                  <circle cx="580" cy="28" r="4" />
+                </g>
+                <circle cx="580" cy="28" r="9" fill="#7C5CFF" opacity="0.25" />
+              </svg>
+              <div class="dash-chart__axis">
+                <span>Янв</span><span>Фев</span><span>Мар</span><span>Апр</span><span>Май</span>
+                <span>Июн</span><span>Июл</span><span>Авг</span><span>Сен</span><span>Окт</span>
+                <span>Ноя</span><span>Дек</span>
+              </div>
+            </div>
+
+            <div class="dash-tiles">
+              <div class="dash-tile">
+                <span class="dash-tile__label">Top regions</span>
+                <ul class="dash-bars">
+                  <li><span>США</span><i style="--w:88%"></i><b>42%</b></li>
+                  <li><span>Германия</span><i style="--w:62%"></i><b>23%</b></li>
+                  <li><span>Россия</span><i style="--w:48%"></i><b>14%</b></li>
+                  <li><span>Бразилия</span><i style="--w:30%"></i><b>9%</b></li>
+                  <li><span>Прочее</span><i style="--w:24%"></i><b>12%</b></li>
+                </ul>
+              </div>
+              <div class="dash-tile">
+                <span class="dash-tile__label">Cohort retention · 90d</span>
+                <div class="dash-heat">
+                  <div class="dash-heat__row">
+                    <span class="dash-heat__cell" style="--v:1"></span>
+                    <span class="dash-heat__cell" style="--v:.85"></span>
+                    <span class="dash-heat__cell" style="--v:.72"></span>
+                    <span class="dash-heat__cell" style="--v:.65"></span>
+                    <span class="dash-heat__cell" style="--v:.6"></span>
+                    <span class="dash-heat__cell" style="--v:.55"></span>
+                  </div>
+                  <div class="dash-heat__row">
+                    <span class="dash-heat__cell" style="--v:1"></span>
+                    <span class="dash-heat__cell" style="--v:.78"></span>
+                    <span class="dash-heat__cell" style="--v:.7"></span>
+                    <span class="dash-heat__cell" style="--v:.62"></span>
+                    <span class="dash-heat__cell" style="--v:.58"></span>
+                    <span class="dash-heat__cell" style="--v:0"></span>
+                  </div>
+                  <div class="dash-heat__row">
+                    <span class="dash-heat__cell" style="--v:1"></span>
+                    <span class="dash-heat__cell" style="--v:.82"></span>
+                    <span class="dash-heat__cell" style="--v:.75"></span>
+                    <span class="dash-heat__cell" style="--v:.68"></span>
+                    <span class="dash-heat__cell" style="--v:0"></span>
+                    <span class="dash-heat__cell" style="--v:0"></span>
+                  </div>
+                  <div class="dash-heat__row">
+                    <span class="dash-heat__cell" style="--v:1"></span>
+                    <span class="dash-heat__cell" style="--v:.88"></span>
+                    <span class="dash-heat__cell" style="--v:.8"></span>
+                    <span class="dash-heat__cell" style="--v:0"></span>
+                    <span class="dash-heat__cell" style="--v:0"></span>
+                    <span class="dash-heat__cell" style="--v:0"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== STATS ===== -->
+  <section class="stats">
+    <div class="container">
+      <div class="stats__grid">
+        <div class="stats__item">
+          <span class="stats__num">2.4M+</span>
+          <span class="stats__label">SQL-запросов в&nbsp;день</span>
+        </div>
+        <div class="stats__item">
+          <span class="stats__num">320ms</span>
+          <span class="stats__label">медианное время ответа</span>
+        </div>
+        <div class="stats__item">
+          <span class="stats__num">99.97%</span>
+          <span class="stats__label">SLA на&nbsp;Pro&nbsp;и&nbsp;Enterprise</span>
+        </div>
+        <div class="stats__item">
+          <span class="stats__num">14&nbsp;дней</span>
+          <span class="stats__label">бесплатный триал</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PRICING ===== -->
+  <section class="pricing" id="pricing">
+    <div class="container">
+      <div class="section-head section-head--center">
+        <span class="eyebrow">Тарифы</span>
+        <h2 class="section-title">Платите за&nbsp;то, <span class="text-grad">чем&nbsp;пользуетесь</span></h2>
+        <p class="section-lead">Прозрачные тарифы без скрытых лимитов. Перейдите на годовой план — сэкономьте&nbsp;20%.</p>
+      </div>
+
+      <div class="pricing__grid">
+
+        <div class="plan">
+          <div class="plan__head">
+            <h3>Starter</h3>
+            <p class="plan__sub">Для небольших команд и пет-проектов</p>
+          </div>
+          <div class="plan__price">
+            <span class="plan__currency">$</span>
+            <span class="plan__amount">0</span>
+            <span class="plan__period">/мес</span>
+          </div>
+          <a href="#try" class="btn btn--ghost btn--block">Начать бесплатно</a>
+          <ul class="plan__list">
+            <li>До 3 пользователей</li>
+            <li>1 база данных</li>
+            <li>500 запросов / месяц</li>
+            <li>7-дневная история</li>
+            <li>Поддержка в&nbsp;Discord</li>
+          </ul>
+        </div>
+
+        <div class="plan plan--featured">
+          <span class="plan__badge">Популярный</span>
+          <div class="plan__head">
+            <h3>Pro</h3>
+            <p class="plan__sub">Для растущих SaaS-команд</p>
+          </div>
+          <div class="plan__price">
+            <span class="plan__currency">$</span>
+            <span class="plan__amount">49</span>
+            <span class="plan__period">/мес за&nbsp;юзера</span>
+          </div>
+          <a href="#try" class="btn btn--primary btn--block">Попробовать Pro</a>
+          <ul class="plan__list">
+            <li>Безлимит пользователей</li>
+            <li>5 баз + Snowflake / BigQuery</li>
+            <li>50&nbsp;000 запросов / месяц</li>
+            <li>Алерты в&nbsp;Slack&nbsp;/&nbsp;TG</li>
+            <li>SSO + 2FA</li>
+            <li>Email-поддержка 24/7</li>
+          </ul>
+        </div>
+
+        <div class="plan">
+          <div class="plan__head">
+            <h3>Enterprise</h3>
+            <p class="plan__sub">Для крупных и&nbsp;регулируемых</p>
+          </div>
+          <div class="plan__price">
+            <span class="plan__amount plan__amount--text">Custom</span>
+          </div>
+          <a href="#contact" class="btn btn--ghost btn--block">Связаться с&nbsp;нами</a>
+          <ul class="plan__list">
+            <li>On-prem / Self-hosted</li>
+            <li>SOC2 · ISO 27001 · HIPAA</li>
+            <li>Безлимит запросов</li>
+            <li>SAML · SCIM · audit log</li>
+            <li>Выделенный CSM</li>
+            <li>SLA 99.99%</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA ===== -->
+  <section class="cta">
+    <div class="container">
+      <div class="cta__inner">
+        <div class="cta__glow" aria-hidden="true"></div>
+        <h2 class="cta__title">
+          Ваши данные уже знают<br />
+          <span class="text-grad">правильный ответ.</span>
+        </h2>
+        <p class="cta__lead">14&nbsp;дней бесплатно, без карты. Подключите БД за&nbsp;90&nbsp;секунд.</p>
+        <div class="cta__actions">
+          <a href="#try" class="btn btn--primary btn--lg">Запустить демо</a>
+          <a href="#docs" class="btn btn--ghost btn--lg">Читать документацию</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <a href="#top" class="nav__logo">
+          <svg class="nav__logo-mark" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+            <path d="M6 22 C 6 14, 10 8, 16 8 C 22 8, 26 13, 26 18 C 26 22, 22 24, 18 24 L 8 24 C 7 24, 6 23, 6 22 Z" fill="url(#logoGrad)" />
+            <circle cx="20" cy="14" r="2.5" fill="#0A0B14" />
+          </svg>
+          <span class="nav__logo-text">NIMBUS</span>
+        </a>
+        <p class="footer__tag">AI-аналитика для тех, кто хочет понимать продукт, а не&nbsp;ковырять SQL.</p>
+      </div>
+
+      <div class="footer__cols">
+        <div class="footer__col">
+          <h4>Продукт</h4>
+          <a href="#features">Возможности</a>
+          <a href="#dashboard">Демо</a>
+          <a href="#pricing">Тарифы</a>
+          <a href="#changelog">Changelog</a>
+        </div>
+        <div class="footer__col">
+          <h4>Документация</h4>
+          <a href="#docs">Гайды</a>
+          <a href="#api">API</a>
+          <a href="#integrations">Интеграции</a>
+          <a href="#status">Status</a>
+        </div>
+        <div class="footer__col">
+          <h4>Компания</h4>
+          <a href="#about">О&nbsp;нас</a>
+          <a href="#blog">Блог</a>
+          <a href="#careers">Карьера</a>
+          <a href="#contact">Контакты</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer__bar">
+      <div class="container footer__bar-inner">
+        <span>© 2025 NIMBUS Inc. Все&nbsp;права&nbsp;защищены.</span>
+        <div class="footer__bar-links">
+          <a href="#privacy">Privacy</a>
+          <a href="#terms">Terms</a>
+          <a href="#security">Security</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
