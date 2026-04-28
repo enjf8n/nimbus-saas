@@ -14,6 +14,14 @@
   window.addEventListener('scroll', onScroll, { passive: true });
   onScroll();
 
+  const closeMobileMenu = () => {
+    const links = document.querySelector('.nav__links');
+    if (links && links.classList.contains('is-open')) {
+      links.classList.remove('is-open');
+      links.style.cssText = '';
+    }
+  };
+
   // ----- Smooth scroll for hash links -----
   document.querySelectorAll('a[href^="#"]').forEach((link) => {
     link.addEventListener('click', (e) => {
@@ -24,6 +32,7 @@
       e.preventDefault();
       const y = target.getBoundingClientRect().top + window.scrollY - 70;
       window.scrollTo({ top: y, behavior: 'smooth' });
+      closeMobileMenu();
     });
   });
 
